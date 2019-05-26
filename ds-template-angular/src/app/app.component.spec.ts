@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ds-tempate-angular'`, () => {
+  it(`should have as title 'ds-template-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ds-tempate-angular');
+    expect(app.title).toEqual('ds-template-angular');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ds-tempate-angular!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ds-template-angular!');
   });
 });

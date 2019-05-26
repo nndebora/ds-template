@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ds-tempate-angular": {
+    "ds-template-angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ds-tempate-angular",
+            "outputPath": "dist/ds-template-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ds-tempate-angular:build"
+            "browserTarget": "ds-template-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ds-tempate-angular:build:production"
+              "browserTarget": "ds-template-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ds-tempate-angular:build"
+            "browserTarget": "ds-template-angular:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "ds-tempate-angular-e2e": {
+    "ds-template-angular-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ds-tempate-angular:serve"
+            "devServerTarget": "ds-template-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ds-tempate-angular:serve:production"
+              "devServerTarget": "ds-template-angular:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "ds-tempate-angular"
+  "defaultProject": "ds-template-angular"
 }
