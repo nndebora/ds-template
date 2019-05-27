@@ -2,10 +2,8 @@ version: "3.6"
 services:
   client:
     build: ds-template-angular/
-      # context: ./ds-template-angular/
-      # dockerfile: Dockerfile
     container_name: ds-app-client
-    image: ds_app
+    image: ds_app_client
     environment:
       - NODE_ENV=development
       - ANGULAR_APP_SERVER_HOST=http://localhost:3000
@@ -13,7 +11,13 @@ services:
       - 4200:4200
     volumes:
       - "./ds-template-angular/:/app"
+  server:
+    build: ds-template-spring/
+    container_name: ds-app-server
+    image: ds_app_server
+    ports:
+      - 8080:8080
+    volumes:
+      - "./ds-template-spring/:/app"
 volumes:
   ? data
-
-  # docker run -d --name nba-app-server -p 80:80 -v `pwd`/data/db.json:/data/db.json clue/json-server
